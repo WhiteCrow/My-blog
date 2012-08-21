@@ -13,7 +13,6 @@ pygments: true
 title : Ruthi Liu's Fatistic Thinking
 tagline: What about my life
 author :
-  name : liusihao
   email : liusihao123@qq.com
   github : WhiteCrow
   twitter : liu_sihao
@@ -38,7 +37,7 @@ JB :
   # Links in your website should always be prefixed with {{BASE_PATH}}
   # however this value will be dynamically changed depending on your deployment situation.
   #
-  # CNAME (http://yourcustomdomain.com)
+  CNAME (http://liusihao.com)
   #   DO NOT SET BASE_PATH 
   #   (urls will be prefixed with "/" and work relatively)
   #

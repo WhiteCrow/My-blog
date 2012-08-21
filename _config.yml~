@@ -11,9 +11,9 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Ruthi Liu's Fatistic Thinking
-tagline: Site Tagline
+tagline: What about my life
 author :
-  name : liusihao
+  name : 
   email : liusihao123@qq.com
   github : WhiteCrow
   twitter : liu_sihao

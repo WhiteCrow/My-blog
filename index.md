@@ -4,12 +4,22 @@ title: Welcome My blog!
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
-<div class="row-fluid">
-	  {% for post in site.posts %}
-	<div class="span6">		    
+<style>
+	.post{
+		height:400px;
+		overflow:hidden;
+	}
+	li{
+		
+	}
+</style>
+
+<div class="row-fluid"><ul>
+	  {% for post in site.posts %}	  
+	<li class="post span6">
 	    	<a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>	    	
-	    	<li>{{ post.date | date_to_string }}</li> 
-	    	<div class="post-content">{{ post.content }}</div>
-	</div>
+	    	{{ post.date | date_to_string }}
+	    	<div class="post-content">{{ post.content }}</div>		
+	</li>
 	  {% endfor %}
-</div>
+</ul></div>

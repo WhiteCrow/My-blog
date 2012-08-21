@@ -4,14 +4,6 @@ title: Welcome My blog!
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
-<style>
-   #disqus_thread{
-    	display: none;
-   }
-   .post-content{
-   		margin-top:-20px;
-   }
-</style>
 <div class="row-fluid">
 	  {% for post in site.posts %}
 	<div class="span6">		    

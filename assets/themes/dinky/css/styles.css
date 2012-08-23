@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic);
-
+@import "bootstrap.min.css";
 /* MeyerWeb Reset */
 
 html, body, div, span, applet, object, iframe,
@@ -231,7 +231,7 @@ h1.header {
 	font-weight: 300;
 	line-height: 1.3em;
 	border-bottom: none;
-	margin-top: 0;
+	margin-top: 0;  
 }
 
 
@@ -308,9 +308,10 @@ a.buttons:hover {
 /* Section - for main page content */
 
 section {
-  width:650px;
+  width:800px;
   float:right;
   padding-bottom:50px;
+  margin-right:-75px;
 }
 
 

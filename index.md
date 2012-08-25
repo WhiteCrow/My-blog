@@ -9,10 +9,9 @@ tagline: Supporting tagline
 		
 	}
 	.post{
-		height:350px;
-		overflow:hidden;
-		float:left;	
-		margin-bottom:35px;
+		height:350px;		
+		overflow:hidden;		
+		margin-bottom:35px;		
 	}
 	.post-content{		
 		color:black;
@@ -32,14 +31,13 @@ tagline: Supporting tagline
 
 <div class="row-fluid">
 	{% for post in site.posts %}
-	 <div class="span4">
+	 <div class="span5">
 			<div class="post" id="no" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
 				<a href="{{ BASE_PATH }}{{ post.url }}">
-			    	{{ post.title }}<br>
+			    	{{ post.title }}
 			    	<li>{{ post.date | date_to_string }}</li>
 			    	<div class="post-content">{{ post.content }}</div>
-			    </a>
-			    <br>
+			    </a>			    
 			</div>
 	</div>	
 	{% endfor %}

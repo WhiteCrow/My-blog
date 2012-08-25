@@ -5,12 +5,14 @@ tagline: Supporting tagline
 ---
 {% include JB/setup %}
 <style>
-	.post-content{
-		height:350px;
-		overflow:hidden;		
+	.post-content{		
+		
 	}
 	.post{
+		height:350px;
+		overflow:hidden;
 		float:left;	
+		margin-bottom:35px;
 	}
 	.post-content{		
 		color:black;
@@ -34,7 +36,7 @@ tagline: Supporting tagline
 			<div class="post" id="no" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
 				<a href="{{ BASE_PATH }}{{ post.url }}">
 			    	{{ post.title }}<br>
-			    	>> {{ post.date | date_to_string }}
+			    	<li>{{ post.date | date_to_string }}</li>
 			    	<div class="post-content">{{ post.content }}</div>
 			    </a>
 			    <br>

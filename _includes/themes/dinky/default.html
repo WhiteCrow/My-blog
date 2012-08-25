@@ -21,10 +21,14 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header"><a href="{{ HOME_PATH }}">{{ site.title }}</a></h1>
+        <h1 class="header">
+	<a style="font-size:70%;color:#15aded" href="{{ HOME_PATH }}">
+		<img style="width:40px;;border:0;margin-bottom:-10px" src="{{ ASSET_PATH }}/images/about/smallme.png" />
+		{{ site.title }}
+	</a>
+	</h1>
         <p class="header">{{ site.tagline }}</p>
-        <ul>          
-          <li><a href="{{ HOME_PATH }}">Index</a></li>
+        <ul>
           <li><a href="{{ BASE_PATH }}/about.html">About Me</a></li>
           {% assign pages_list = site.pages %}
           {% assign group = 'navigation' %}

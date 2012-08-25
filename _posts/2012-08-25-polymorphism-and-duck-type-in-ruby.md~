@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Polymorphism and Duck Type in Ruby"
+description: ""
+category: 
+tags: []
+---
+{% include JB/setup %}

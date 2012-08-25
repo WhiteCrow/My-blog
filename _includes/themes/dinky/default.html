@@ -25,6 +25,7 @@
         <p class="header">{{ site.tagline }}</p>
         <ul>          
           <li><a href="{{ HOME_PATH }}">Index</a></li>
+          <li><a href="{{ BASE_PATH }}/about.html">About Me</a></li>
           {% assign pages_list = site.pages %}
           {% assign group = 'navigation' %}
           {% include JB/pages_list %}
@@ -43,7 +44,7 @@
         {% endif %}
         {% if site.author %}
         <div class="misc vcard">
-          <p>about</p>
+          <p style="margin-bottom:5px;">Social</p>
           <ul>
             <a href = "http://github.com/WhiteCrow" target="_blank"><img src="{{ ASSET_PATH }}/images/about/github.jpg"  target="_blank" style="width:50px;height:50px;margin-bottom:-20px;"/></a> 
             <a href = "http://www.douban.com/people/baiwuya/" target="_blank"><img src="{{ ASSET_PATH }}/images/about/douban.gif" style="width:50px;height:50px;margin-bottom:-20px;"/></a>

@@ -6,7 +6,7 @@
     <meta name="author" content="{{ site.author.name }}" />
     <title>{{ page.title }}</title>
     
-    <link rel="stylesheet" href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="{{ ASSET_PATH }}/css/styles.css">
     <link rel="stylesheet" href="{{ ASSET_PATH }}/css/pygment_trac.css">
     <script src="{{ ASSET_PATH }}/js/scale.fix.js"></script>
@@ -44,27 +44,10 @@
         <div class="misc vcard">
           <p>about</p>
           <ul>
-            {% if site.author.email %}
-            <li class="contact"><address><span class="fn email">{{ site.author.email }}</span></address></li>
-            {% endif %}
-            {% if site.author.github %}
-            <li class="github"><a href="http://github.com/{{ site.author.github }}/" rel="me">github.com/{{ site.author.github }}</a></li>
-            {% endif %}
-            {% if site.author.twitter %}
-            <li class="twitter"><a href="http://twitter.com/{{ site.author.twitter }}/" rel="me">twitter.com/{{ site.author.twitter }}</a></li>
-            {% endif %}
-            {% if site.author.facebook %}
-            <li class="facebook"><a href="http://facebook.com/{{ site.author.facebook }}/" rel="me">facebook.com/{{ site.author.facebook }}</a></li>
-            {% endif %}
-            {% if site.author.flickr %}
-            <li class="flickr"><a href="http://flickr.com/{{ site.author.flickr }}/" rel="me">flickr.com/{{ site.author.flickr }}</a></li>
-            {% endif %}
-            {% if site.author.yelp %}
-            <li class="yelp"><a href="http://{{ site.author.yelp }}.yelp.com/" rel="me">{{ site.author.yelp }}.yelp.com</a></li>
-            {% endif %}
-            {% if site.author.pinterest %}
-            <li class="pinterest"><a href="http://pinterest.com/{{ site.author.pinterest }}" rel="me">pinterest.com/{{ site.author.pinterest }}</a></li>
-            {% endif %}
+            <a href = "http://github.com/WhiteCrow" target="_blank"><img src="{{ ASSET_PATH }}/images/about/github.jpg"  target="_blank" style="width:50px;height:50px;margin-bottom:-20px;"/></a> 
+            <a href = "http://www.douban.com/people/baiwuya/" target="_blank"><img src="{{ ASSET_PATH }}/images/about/douban.gif" style="width:50px;height:50px;margin-bottom:-20px;"/></a>
+            <a href="http://twitter.com/liu_sihao" target="_blank"><img src="{{ ASSET_PATH }}/images/about/twitter.gif" /></a>
+            <a href="http://weibo.com/wuya1" target="_blank"><img src="{{ ASSET_PATH }}/images/about/sinaminiblog.gif" /></a>
           </ul>
         </div><!-- misc -->
         {% endif %}

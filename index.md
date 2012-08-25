@@ -4,6 +4,7 @@ title: Welcome My blog!
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
+
 <style>
 	.post-content{		
 		

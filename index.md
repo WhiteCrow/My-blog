@@ -31,7 +31,7 @@ tagline: Supporting tagline
 <div class="row-fluid">
 	{% for post in site.posts %}
 	 <div class="span4">
-			<div class="post" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
+			<div class="post" id="no" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
 				<a href="{{ BASE_PATH }}{{ post.url }}">
 			    	{{ post.title }}<br>
 			    	>> {{ post.date | date_to_string }}

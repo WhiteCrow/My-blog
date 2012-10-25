@@ -63,10 +63,11 @@ Hi, my name is LiuSihao. This is my personal blog that meant to share with you t
 
 <div id="social">
 	<h2>Find me</h2>
-	<a href=""><img src="{{ ASSET_PATH }}/dinky/images/about/douban.gif"/></a>
-	<a href=""><img src="{{ ASSET_PATH }}/dinky/images/about/github.jpg" style= "width:50px;height:50px;"/></a>
-	<a href=""><img src="{{ ASSET_PATH }}/dinky/images/about/sinaminiblog.gif"/></a>
-	<a href=""><img src="{{ ASSET_PATH }}/dinky/images/about/twitter.gif"/></a>
+	<a href="https://twitter.com/liu_sihao" target="_blank"><img src="{{ ASSET_PATH }}/dinky/images/about/twitter.gif"/></a>
+	<a href="https://github.com/WhiteCrow" target="_blank"><img src="{{ ASSET_PATH }}/dinky/images/about/github.jpg" style= "width:50px;height:50px;"/></a>
+	<a href="http://www.douban.com/people/baiwuya/" target="_blank"><img src="{{ ASSET_PATH }}/dinky/images/about/douban.gif"/></a>	
+	<a href="http://www.weibo.com/wuya1" target="_blank"><img src="{{ ASSET_PATH }}/dinky/images/about/sinaminiblog.gif"/></a>
+	
 </div>
 <!-- 
 <div class="row-fluid">

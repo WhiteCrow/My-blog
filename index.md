@@ -10,7 +10,8 @@ tagline: Supporting tagline
 		
 	}
 	.post{
-		height:350px;		
+		height:350px;
+		text-overflow: ellipsis;
 		overflow:hidden;		
 		margin-bottom:35px;		
 	}
@@ -22,11 +23,11 @@ tagline: Supporting tagline
 		text-decoration:none;        
 	}
 	#cover{
-        /*filter:alpha(opacity=40);
-        -moz-opacity: 0.4;
-        opacity: 0.4;
-        background-color:#fff;
-        z-index:5; */
+        filter:alpha(opacity=70);
+        -moz-opacity: 0.7;
+        opacity: 0.7;
+        background-color:blue;
+        z-index:5; 
 	}
 </style>
 

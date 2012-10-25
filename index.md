@@ -45,7 +45,7 @@ tagline: What about my life
 	}
 </style>
 
-<img src="{{ ASSET_PATH }}/dinky/images/index/index.png" width="940px" />
+<a href="/archive.html"><img src="{{ ASSET_PATH }}/dinky/images/index/index.png" width="940px" /></a>
 
 <div id="cate">
 {% for category in site.categories %} 

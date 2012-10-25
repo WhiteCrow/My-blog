@@ -22,11 +22,11 @@ tagline: Supporting tagline
 		text-decoration:none;        
 	}
 	#cover{
-        filter:alpha(opacity=40);
+        /*filter:alpha(opacity=40);
         -moz-opacity: 0.4;
         opacity: 0.4;
         background-color:#fff;
-        z-index:5; 
+        z-index:5; */
 	}
 </style>
 
@@ -37,6 +37,7 @@ tagline: Supporting tagline
 				<a href="{{ BASE_PATH }}{{ post.url }}">
 			    	{{ post.title }}
 			    	<li>{{ post.date | date_to_string }}</li>
+			    	<br>
 			    	<div class="post-content">{{ post.content }}</div>
 			    </a>			    
 			</div>

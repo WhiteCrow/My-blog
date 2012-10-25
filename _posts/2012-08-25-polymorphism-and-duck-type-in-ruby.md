@@ -2,7 +2,7 @@
 layout: post
 title: "Polymorphism and Duck Type in Ruby"
 description: ""
-category: [technology]
+category: ["technology"]
 tags: ["Ruby"]
 ---
 {% include JB/setup %}

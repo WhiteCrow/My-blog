@@ -2,7 +2,7 @@
 layout: post
 title: "Jekyll notes"
 description: ""
-category: [technology]
+category: ["technology"]
 tags: ["blog", "jekyll", "note"]
 ---
 {% include JB/setup %}

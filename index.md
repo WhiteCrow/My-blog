@@ -33,6 +33,10 @@ tagline: What about my life
 		float: left;
 		margin:10px;		
 		margin-right:30px;
+	}	
+	#cate ul li{
+		font-size: 14px;		
+		padding-bottom: 4px;
 	}
 	#about{
 		margin:10px;		

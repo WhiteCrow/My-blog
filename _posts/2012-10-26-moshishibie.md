@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "moshishibie"
+title: "模式识别"
 description: ""
 category: ["essay"]
 tags: ["study"]

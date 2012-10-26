@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "期权期货及其他衍生产品（第一章）英语单词"
+title: "期权期货及其他衍生产品第1章英语单词"
 description: ""
 category: ["finance"]
 tags: ["English","note"]
@@ -27,7 +27,6 @@ tags: ["English","note"]
 18. European option：欧式期权。与之相反，直到某一特定时刻才能行使该期权。
 19. option premium：期权保证金。（premium，保险费）
 20. writing the option：出售一张期权合约。
-
 21. hedger：对冲者
 22. speculator：投机者
 23. arbitrageur[,ɑrbətrɑ'ʒɝ] ：套利者

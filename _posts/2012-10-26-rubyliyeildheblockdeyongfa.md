@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Ruby里yeild和&block的用法"
+title: "Ruby里yeild和block的用法"
 description: ""
 category: ["technology"]
 tags: ["Ruby"]
 ---
 {% include JB/setup %}
-
+---
+##Ruby里yeild和&block的用法
+<br>
 ###例子：
 
 	class Box

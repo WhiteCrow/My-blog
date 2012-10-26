@@ -17,11 +17,11 @@ tags: ["life"]
 “这曲子真好听，放得是什么歌？”有次一个胖乎乎的男孩问。
 “《Fly me to the moon》。”他身边的女孩和店员一起含笑答道。
 
-Fill my heart with songs.
-And let me sing for ever more.
-You are all I long for.
-All I worship and adore.
-In other words,
-please be true.
-In other words,
+Fill my heart with songs.<br>
+And let me sing for ever more.<br>
+You are all I long for.<br>
+All I worship and adore.<br>
+In other words,<br>
+please be true.<br>
+In other words,<br>
 I love you.

@@ -26,6 +26,7 @@
 
   <body>
 
+<<<<<<< HEAD
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container">
@@ -39,6 +40,32 @@
       </div>
     </div>
 
+=======
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">          
+          <a href="{{ HOME_PATH }}" style="float:left;"><img src="{{ ASSET_PATH }}/images/comic_me.png" style="height:35px;"></a>          
+          <a class="brand" href="{{ HOME_PATH }}" style="margin-left:6px">{{ site.title }}</a>          
+          <ul class="nav">
+            <li><a href="/about.html">About</a></li>
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}            
+          </ul>
+          <form method="get" action="http://www.google.com/search" class="navbar-search pull-left" style="float:right">
+              <input type=text name=q class="search-query span3" value placeholder="Search">
+              <input type=submit name=btnG value="Search" class="btn btn-inverse" style="margin-top:0px;">
+              <!-- <input type=hidden name=ie value=GB2312>
+              <input type=hidden name=oe value=GB2312>
+              <input type=hidden name=hl value=zh-CN> -->
+              <input type=hidden name=domains value="liusihao.com">
+              <input type=hidden name=sitesearch value="liusihao.com">
+          </form>
+        </div>
+      </div>
+    </div>
+<br><br>
+>>>>>>> b28037c0a91704208e8f540f99d724034b54215d
     <div class="container">
 
       <div class="content">

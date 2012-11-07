@@ -1,0 +1,17 @@
+
+http://username.github.com/archive.html
+http://username.github.com/index.html
+http://username.github.com/about.html
+http://username.github.com/categories.html
+http://username.github.com/sitemap.txt
+http://username.github.com/tags.html
+http://username.github.com/pages.html
+http://username.github.com/atom.xml
+
+http://username.github.com/essay/2012/08/27/
+http://username.github.com/technology/2012/08/25/polymorphism-and-duck-type-in-ruby
+http://username.github.com/technology/2012/08/25/new-post
+http://username.github.com/technology/2012/08/25/jekyll-notes
+http://username.github.com/finance/2012/08/25/
+http://username.github.com/essay/2012/08/21/2
+http://username.github.com/essay/2012/08/21/

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Welcome My blog!
+<<<<<<< HEAD
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
@@ -11,6 +12,21 @@ tagline: Supporting tagline
 	}
 	.post{
 		float:left;	
+=======
+tagline: What about my life
+---
+{% include JB/setup %}
+
+<style>
+	/*.post-content{		
+		
+	}
+	.post{
+		height:350px;
+		text-overflow: ellipsis;
+		overflow:hidden;		
+		margin-bottom:35px;		
+>>>>>>> b28037c0a91704208e8f540f99d724034b54215d
 	}
 	.post-content{		
 		color:black;
@@ -20,6 +36,7 @@ tagline: Supporting tagline
 		text-decoration:none;        
 	}
 	#cover{
+<<<<<<< HEAD
         filter:alpha(opacity=40);
         -moz-opacity: 0.4;
         opacity: 0.4;
@@ -42,3 +59,71 @@ tagline: Supporting tagline
 	</div>	
 	{% endfor %}
 </div>
+=======
+        filter:alpha(opacity=70);
+        -moz-opacity: 0.7;
+        opacity: 0.7;
+        background-color:blue;
+        z-index:5; 
+	}*/
+	#cate{
+		float: left;
+		margin:10px;		
+		margin-right:30px;
+	}	
+	#cate ul li{
+		font-size: 14px;		
+		padding-bottom: 4px;
+	}
+	#about{
+		margin:10px;		
+	}
+	#social{		
+		margin:10px;		
+	}
+	#social h2{		
+		margin-bottom:5px;		
+	}
+</style>
+
+<a href="/archive.html"><img src="{{ ASSET_PATH }}/dinky/images/index/index.png" width="940px" /></a>
+
+<div id="cate">
+{% for category in site.categories %} 
+  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+  <ul>
+    {% assign pages_list = category[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+</div>
+<div id="about">
+	<h2>About me</h2>
+Hi, my name is LiuSihao. This is my personal blog that meant to share with you those common technical problems and My picture in your work or your life, especially in web related development. I am mainly working on Ruby on Rails related projects half years..I like comic, draw, read and write novels, too.
+</div>
+
+<div id="social">
+	<h2>Find me</h2>
+	<a href="https://twitter.com/liu_sihao" target="_blank"><img src="{{ ASSET_PATH }}/dinky/images/about/twitter.gif"/></a>
+	<a href="https://github.com/WhiteCrow" target="_blank"><img src="{{ ASSET_PATH }}/dinky/images/about/github.jpg" style= "width:50px;height:50px;"/></a>
+	<a href="http://www.douban.com/people/baiwuya/" target="_blank"><img src="{{ ASSET_PATH }}/dinky/images/about/douban.gif"/></a>	
+	<a href="http://www.weibo.com/wuya1" target="_blank"><img src="{{ ASSET_PATH }}/dinky/images/about/sinaminiblog.gif"/></a>
+	
+</div>
+<!-- 
+<div class="row-fluid">
+	
+	{% for post in site.posts %}
+	 <div class="span5">
+			<div class="post" id="no" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
+				<a href="{{ BASE_PATH }}{{ post.url }}">
+			    	{{ post.title }}
+			    	<li>{{ post.date | date_to_string }}</li>
+			    	<br>
+			    	<div class="post-content">{{ post.content }}</div>
+			    </a>			    
+			</div>
+	</div>	
+	{% endfor %}
+</div> -->
+>>>>>>> b28037c0a91704208e8f540f99d724034b54215d

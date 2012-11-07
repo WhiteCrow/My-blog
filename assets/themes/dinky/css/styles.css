@@ -1,9 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic);
-<<<<<<< HEAD
-
-=======
 @import "bootstrap.min.css";
->>>>>>> b28037c0a91704208e8f540f99d724034b54215d
 /* MeyerWeb Reset */
 
 html, body, div, span, applet, object, iframe,
@@ -315,13 +311,8 @@ section {
   width:800px;
   float:right;
   padding-bottom:50px;
-<<<<<<< HEAD
-  margin-right:-70px;
-=======
   margin-right:-75px;
->>>>>>> b28037c0a91704208e8f540f99d724034b54215d
 }
-
 
 /* Footer */
 

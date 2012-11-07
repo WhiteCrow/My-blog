@@ -1,18 +1,6 @@
 ---
 layout: page
 title: Welcome My blog!
-<<<<<<< HEAD
-tagline: Supporting tagline
----
-{% include JB/setup %}
-<style>
-	.post-content{
-		height:350px;
-		overflow:hidden;		
-	}
-	.post{
-		float:left;	
-=======
 tagline: What about my life
 ---
 {% include JB/setup %}
@@ -26,7 +14,6 @@ tagline: What about my life
 		text-overflow: ellipsis;
 		overflow:hidden;		
 		margin-bottom:35px;		
->>>>>>> b28037c0a91704208e8f540f99d724034b54215d
 	}
 	.post-content{		
 		color:black;
@@ -36,30 +23,6 @@ tagline: What about my life
 		text-decoration:none;        
 	}
 	#cover{
-<<<<<<< HEAD
-        filter:alpha(opacity=40);
-        -moz-opacity: 0.4;
-        opacity: 0.4;
-        background-color:#fff;
-        z-index:5; 
-	}
-</style>
-
-<div class="row-fluid">
-	{% for post in site.posts %}
-	 <div class="span4">
-			<div class="post" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
-				<a href="{{ BASE_PATH }}{{ post.url }}">
-			    	{{ post.title }}<br>
-			    	>> {{ post.date | date_to_string }}
-			    	<div class="post-content">{{ post.content }}</div>
-			    </a>
-			    <br>
-			</div>		
-	</div>	
-	{% endfor %}
-</div>
-=======
         filter:alpha(opacity=70);
         -moz-opacity: 0.7;
         opacity: 0.7;
@@ -126,4 +89,3 @@ Hi, my name is LiuSihao. This is my personal blog that meant to share with you t
 	</div>	
 	{% endfor %}
 </div> -->
->>>>>>> b28037c0a91704208e8f540f99d724034b54215d

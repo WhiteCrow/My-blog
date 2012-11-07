@@ -1,33 +1,42 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="author" content="" />
+    <meta charset="utf-8">
     <title>Pages</title>
     
-    <link rel="stylesheet" href="/assets/themes/dinky/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/themes/dinky/css/styles.css">
-    <link rel="stylesheet" href="/assets/themes/dinky/css/pygment_trac.css">
-    <script src="/assets/themes/dinky/js/scale.fix.js"></script>
-    <script src="/assets/themes/dinky/js/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header"><a href="/">Ruth Liu's Fantastic Thinking</a></h1>
-        <p class="header">What about my life</p>
-        <ul>
-          
-          
-          
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">          
+          <a href="/" style="float:left;"><img src="/assets/themes/twitter/images/comic_me.png" style="height:35px;"></a>          
+          <a class="brand" href="/" style="margin-left:6px">Ruth Liu</a>          
+          <ul class="nav">
+            <li><a href="/about.html">About</a></li>
+            
+            
+            
 
 
   
@@ -69,6 +78,10 @@
   
     
       
+    
+  
+    
+      
       	
       	<li><a href="/categories.html">Categories</a></li>
       	
@@ -77,37 +90,32 @@
   
 
 
-
-        </ul>
-        
-        
-        <div class="misc vcard">
-          <p>about</p>
-          <ul>
-            
-            <li class="contact"><address><span class="fn email">liusihao123@qq.com</span></address></li>
-                        
-            
-            <li class="github"><a href="http://github.com/WhiteCrow/" rel="me">github.com/WhiteCrow</a></li>
-            
-            
-            <li class="twitter"><a href="http://twitter.com/liu_sihao/" rel="me">twitter.com/liu_sihao</a></li>
-            
-            
-            
-            
             
           </ul>
-        </div><!-- misc -->
+          <form method="get" action="https://www.google.com/search" class="navbar-search pull-left" style="float:right">
+              <input type=text name=q class="search-query span3" value placeholder="Search">
+              <input type=submit name=btnG value="Search" class="btn btn-inverse" style="margin-top:0px;">
+              <!-- <input type=hidden name=ie value=GB2312>
+              <input type=hidden name=oe value=GB2312>
+              <input type=hidden name=hl value=zh-CN> -->
+              <input type=hidden name=domains value="liusihao.com">
+              <input type=hidden name=sitesearch value="liusihao.com">
+          </form>
+        </div>
+      </div>
+    </div>
+<br><br>
+    <div class="container">
+
+      <div class="content">
         
-      </header>
+<div class="page-header">
+  <h1>Pages </h1>
+</div>
 
-      <section>
-      
-<section>
-  <h1>Pages</h1>
-
-  
+<div class="row">
+  <div class="span12">
+    
 
 <h2>All Pages</h2>
 <ul>
@@ -159,6 +167,14 @@
     
       
       	
+      	<li><a href="/about.html">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
       	<li><a href="/atom.xml">Atom Feed</a></li>
       	
       
@@ -177,45 +193,23 @@
 
 </ul>
 
-
-  
-
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
-    
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</div>
 
 
 
-
-</section>
-
-<style>
-   #disqus_thread{
-    	display: none;
-   }
-</style>
-
-      </section>
+      </div>
 
       <footer>
-      
+        <p>&copy;  2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
       </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+
+    </div> <!-- /container -->
+
+    
   </body>
 </html>
 
-<style>
-</style>

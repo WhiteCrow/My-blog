@@ -10,13 +10,8 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-<<<<<<< HEAD
-title : Ruth Liu's Fantastic Thinking
-tagline: What about my life
-=======
 title : Ruth Liu
 tagline: Fantastic Thinking
->>>>>>> b28037c0a91704208e8f540f99d724034b54215d
 author :
   name :
   email : liusihao123@qq.com
@@ -24,10 +19,6 @@ author :
   twitter : liu_sihao
   feedburner : feedname
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b28037c0a91704208e8f540f99d724034b54215d
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls

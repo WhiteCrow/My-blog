@@ -2,7 +2,7 @@
 layout: post
 title: "最近的学习心得"
 description: ""
-category: essay
+category: ["essay"]
 tags: ["study"]
 ---
 {% include JB/setup %}

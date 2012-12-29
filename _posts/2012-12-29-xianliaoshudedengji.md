@@ -3,7 +3,7 @@ layout: post
 title: "闲聊书的等级"
 description: ""
 ccategory: ["essay"] 
-tags: ["book","study"]
+tags: ["book", "study"]
 ---
 {% include JB/setup %}
 

@@ -3,7 +3,7 @@ layout: post
 title: "专业人生"
 description: ""
 category: ["essay"]
-tags: ["book","study"]
+tags: ["book", "study"]
 ---
 {% include JB/setup %}
 

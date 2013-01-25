@@ -4,13 +4,57 @@
  <title>Ruth Liu</title>
  <link href="http://username.github.com/atom.xml" rel="self"/>
  <link href="http://username.github.com"/>
- <updated>2013-01-25T11:16:52+08:00</updated>
+ <updated>2013-01-25T11:47:35+08:00</updated>
  <id>http://username.github.com</id>
  <author>
    <name></name>
    <email>liusihao123@qq.com</email>
  </author>
 
+ 
+ <entry>
+   <title>ruby中class_eval和instance_eval的区别</title>
+   <link href="http://username.github.com/technology/2013/01/25/rubyzhongclass_evalheinstance_evaldequbie"/>
+   <updated>2013-01-25T00:00:00+08:00</updated>
+   <id>http://username.github.com/technology/2013/01/25/rubyzhongclass_evalheinstance_evaldequbie</id>
+   <content type="html">&lt;p&gt;（1) C.class_eval &amp;#8220;eval_str&amp;#8221; 等价于在C中放入eval_str这段代码：class_eval只有类对象(Class Object)才能执行，普通对象没有这个方法。&lt;/p&gt;
+
+&lt;p&gt;（2）obj.instance_eval &amp;#8220;eval_str&amp;#8221; 等价于class &amp;#171;&amp;#160;obj eval_str end，也就是在obj的单例类中放入eval_str这段代码，同时还能访问obj的实例变量！instance_eval对任意实例都可以运行。&lt;/p&gt;
+
+&lt;p&gt;原理简记：&lt;br /&gt;（1）The Module class defines a method named class_eval . (module_eval is a synonym for class_eval .) ，Class &amp;lt; Module &amp;lt; Object&lt;/p&gt;
+
+&lt;p&gt;（2）The Object class defines a method named instance_eval. ruby中都是对象，所以都可以运行哈。&lt;/p&gt;
+
+&lt;p&gt;示例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Test;end
+Test.class_eval do
+	def class_eval_test
+		puts &amp;quot;class_eval&amp;quot;
+	end
+end
+
+Test.new.class_eval_test
+#=&amp;gt;class_eval
+
+Test.class_eval do
+	puts &amp;quot;class_eval_2&amp;quot;
+end
+#=&amp;gt;class_eval_2
+
+t = Test.new
+t.instance_eval do
+	def instance_eval_test
+		puts &amp;quot;instance_eval_test&amp;quot;
+	end
+end
+
+t.instance_eval_test
+#=&amp;gt;instance_eval_test
+
+Test.instance_eval_test
+#=&amp;gt;NoMethodError: undefined method `instance_eval_test&amp;#39; for #&amp;lt;Class:0x00000002a84df8&amp;gt;::Test&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
  
  <entry>
    <title>闲聊书的等级</title>
@@ -35,29 +79,29 @@
    <link href="http://username.github.com/essay/2012/12/29/2012nianxuexijingyanzongjie"/>
    <updated>2012-12-29T00:00:00+08:00</updated>
    <id>http://username.github.com/essay/2012/12/29/2012nianxuexijingyanzongjie</id>
-   <content type="html">&lt;h2 id='id8'&gt;阅读与实践&lt;/h2&gt;
+   <content type="html">&lt;h2 id='id68'&gt;阅读与实践&lt;/h2&gt;
 
 &lt;p&gt;今年读得最好的一本书是《如何阅读一本书》。里面有一句话让我的印象非常深刻，大概的意思是“如果你读一本实用性的书而不能在实践中运用它，那么这本书相当于白读了。”我非常赞同，之前看茅于轼的博客中的一篇《习而时学之的工程学教育》也提到“用以致学”，我觉得就编程来说，更好的教育方式应该是从简单到难，一开始学HTML，CSS或一些简单的界面设计，然后是python或Ruby，再然后是SQL、开发框架，项目管理工具，版本管理工具地使用，接着学C，C++和JAVA及其开发工具，再接着是重构和设计模式，最后才是算法、数据结构、操作系统、编译原理这些东西，从易到难，用以致学；而当代IT教育的路数确是C语言——算法——数据库——编译原理——操作系统，中间加上网络、互联网、分布式、电信方面的基础理论，不得不感叹这种路数真是太特么坑爹了。&lt;/p&gt;
 &lt;hr /&gt;
-&lt;h2 id='id9'&gt;如何学习&lt;/h2&gt;
+&lt;h2 id='id69'&gt;如何学习&lt;/h2&gt;
 
-&lt;h4 id='id10'&gt;信源&lt;/h4&gt;
+&lt;h4 id='id70'&gt;信源&lt;/h4&gt;
 
 &lt;p&gt;信源的价值是学习要素中占得分量最大的那一块——甚至比意志力和专注更重要，寻找到高价值的适合自己的信源这一点再怎么强调也不为过。比如操作系统这种东西，最好就是照着Linux 1.1的源码自己写一个微型操作系统出来；编译原理也一样，自己照着书和编译器的源代码试着实现一个自己的编译器；算法与数据结构这种系统性不强的科目每天看一篇清晰易懂的博文并实践就很好了。&lt;/p&gt;
 
-&lt;h4 id='id11'&gt;实践&lt;/h4&gt;
+&lt;h4 id='id71'&gt;实践&lt;/h4&gt;
 
 &lt;p&gt;最好的学习方式：是加入一个项目与圈子，在实践中成长。有团队就在团队中边做边学，没有团队就在Github上找个简单的开源项目去fork，研究，修改。以项目为中心，书、论文、google都是只是参考。少看多做非常非常重要！！（这也是跟我自己说的），玩机器学习？看了书理解基本后直接fork github一个项目开始看源代码，自己修改代码，pull request。操作系统？编译器？都是这样。&lt;/p&gt;
 
-&lt;h4 id='id12'&gt;生态环境&lt;/h4&gt;
+&lt;h4 id='id72'&gt;生态环境&lt;/h4&gt;
 
 &lt;p&gt;该分支的生态环境——开源社区的贡献、巨头公司和大学在上下游的支持、这个领域的大牛、著名论文有哪些？熟悉生态环境是在你实践一个项目的过程中会自然而然接触到的，也是在实践之后要重点熟悉的。&lt;/p&gt;
 
-&lt;h4 id='id13'&gt;选书？&lt;/h4&gt;
+&lt;h4 id='id73'&gt;选书？&lt;/h4&gt;
 
 &lt;p&gt;书只是众多信源中的一种，我现在感觉书的重要性远远没有人们想象的那么高，如果不是一个人的主业，对每个细分领域中，反复阅读的经典书籍也就两三本，一本经典入门，一本当手册参考，一本讲思想本质，多余的书是不值得读全本的。我现在反复阅读的书中只有Ruby on Rails这一块中有超过3本，远离读书的诱惑，非常有必要。&lt;/p&gt;
 &lt;hr /&gt;
-&lt;h2 id='id14'&gt;我的学习管理&lt;/h2&gt;
+&lt;h2 id='id74'&gt;我的学习管理&lt;/h2&gt;
 
 &lt;p&gt;因为是做IT的缘故，我的学习管理链全都是软件工具所构建的，分为下面这些软件：&lt;/p&gt;
 
@@ -65,13 +109,13 @@
 
 &lt;p&gt;这些软件又分为三大类：输入，整理和输出&lt;/p&gt;
 
-&lt;h3 id='id15'&gt;输入&lt;/h3&gt;
+&lt;h3 id='id75'&gt;输入&lt;/h3&gt;
 
-&lt;h4 id='id16'&gt;第一手知识来源：&lt;/h4&gt;
+&lt;h4 id='id76'&gt;第一手知识来源：&lt;/h4&gt;
 
 &lt;p&gt;博客、书籍、遇到疑难问题后google的答案、SNS碎片知识&lt;/p&gt;
 
-&lt;h4 id='id17'&gt;处理方式：&lt;/h4&gt;
+&lt;h4 id='id77'&gt;处理方式：&lt;/h4&gt;
 
 &lt;p&gt;google的答案、SNS碎片、博客中确实有效用的都用chrome的插件“悦读”（也叫evernote clipe）&lt;/p&gt;
 
@@ -81,15 +125,15 @@
 
 &lt;p&gt;&lt;img alt='mind map' src='http://farm9.staticflickr.com/8491/8320620890_daaa2ee968_b.jpg' /&gt;&lt;/p&gt;
 
-&lt;h3 id='id18'&gt;整理&lt;/h3&gt;
+&lt;h3 id='id78'&gt;整理&lt;/h3&gt;
 
 &lt;p&gt;能形成思维导图的笔记都会通过email发送到我的电脑上。 而不能形成导图的笔记事先会在evernote或豆瓣笔记里加上标签和分类，多了之后的则会整理成&lt;a href='http://zh.wikipedia.org/zh-hans/Markdown'&gt;markdown&lt;/a&gt;形式的知识树，最后思维导图、markdown文件、一些可重用的代码都会整合到我用github做的&lt;a href='https://github.com/WhiteCrow/km'&gt;知识管理工具&lt;/a&gt;中。&lt;/p&gt;
 
-&lt;h3 id='id19'&gt;输出&lt;/h3&gt;
+&lt;h3 id='id79'&gt;输出&lt;/h3&gt;
 
 &lt;p&gt;最后输出分为两份： 豆瓣日记则是随笔，想到什么写什么，大多写的短文； 博客，写可以分享的，稍微有价值一些的东西；&lt;/p&gt;
 
-&lt;h3 id='id20'&gt;欠缺的东西&lt;/h3&gt;
+&lt;h3 id='id80'&gt;欠缺的东西&lt;/h3&gt;
 
 &lt;p&gt;这个学习管理链条中还欠缺一些东西&lt;br /&gt;1. 高端知识的输入——知名博客、论文数据库。&lt;br /&gt;2. 自动化的整理方式，可参考阳志平的&lt;a href='http://www.douban.com/note/254981732/'&gt;科学的科学：科学计量学入门浅谈所用到的方法&lt;/a&gt;。&lt;br /&gt;3. 知识管理系统查阅缓慢，需要做成一个web app，并将它和我的博客合并起来。&lt;br /&gt;4. 工具太分散了，特别是笔记工具，需要调整。&lt;br /&gt;5. 请大家批评。&lt;/p&gt;
 
@@ -226,7 +270,7 @@ bar
 # 2
 #=&amp;gt; &amp;quot;I will display&amp;quot; &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id='id7'&gt;参数处理&lt;/h2&gt;
+&lt;h2 id='id67'&gt;参数处理&lt;/h2&gt;
 
 &lt;p&gt;我们可以看到，假设Proc和lambda两者都定义了2个参数，但在实际调用时，只传一个的话，lambda 会报错，Proc 将缺失的参数设为 nil，然后正常调用。 f.call(1)时，得到的是&lt;span&gt;1,nil&lt;/span&gt; 而b.call(1)时，则会报错：ArgumentError: wrong number of arguments (1 for 2)&lt;/p&gt;
 
@@ -243,7 +287,7 @@ bar
    <content type="html">&lt;hr /&gt;
 &lt;h2 id='rubyyeildblock'&gt;Ruby里yeild和&amp;amp;block的用法&lt;/h2&gt;
 &lt;br /&gt;
-&lt;h3 id='id5'&gt;例子：&lt;/h3&gt;
+&lt;h3 id='id65'&gt;例子：&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;class Box
    def do(who,kind,&amp;amp;block)
@@ -261,7 +305,7 @@ box.do(&amp;quot;I&amp;quot;,&amp;quot;iron&amp;quot;){ return &amp;quot;open&am
 box.do(&amp;quot;She&amp;quot;,&amp;quot;wooden&amp;quot;){ &amp;quot;kick&amp;quot; }
 #=&amp;gt; &amp;quot;She kick wooden Box&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id='id6'&gt;让我们来做一个改进版：&lt;/h3&gt;
+&lt;h3 id='id66'&gt;让我们来做一个改进版：&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;class People
   def initialize(name)
@@ -354,7 +398,7 @@ def method_missing(str, *args)
      end
 end&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;而不要这样单纯把method_missing方法用作一个防止抛异常方法： 错误的用法：&lt;/p&gt;
+&lt;p&gt;而不要这样单纯把method_missing方法用作一个防止抛异常方法。错误的用法：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;CATCH_METHODS = [:profile, :email, :full_name]
 def method_missing(str, *args)
@@ -444,7 +488,7 @@ box.send(&amp;quot;open_#{num}&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
    <link href="http://username.github.com/essay/2012/10/26/moshishibie"/>
    <updated>2012-10-26T00:00:00+08:00</updated>
    <id>http://username.github.com/essay/2012/10/26/moshishibie</id>
-   <content type="html">&lt;h3 id='id1'&gt;一：什么是模式&lt;/h3&gt;
+   <content type="html">&lt;h3 id='id61'&gt;一：什么是模式&lt;/h3&gt;
 
 &lt;p&gt;人类有许多智慧是存在于右脑的，右脑有一个非常重要的功能就是模式的判断和识别（参考《非理性市场与蜥蜴式大脑思维》和《程序员的思维修炼》），善用这一点，常常能极大的提高自己的能力。为了说明模式的威力，举几个例子：&lt;/p&gt;
 
@@ -460,7 +504,7 @@ box.send(&amp;quot;open_#{num}&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;理解模式，即是理解什么样的事物倾向于联系到一起或一起发生。如果我们知道世界运作的模式，这个世界就会成为一个可以预测和控制的地方。&lt;/p&gt;
 
-&lt;h3 id='id2'&gt;二：理解趋势：&lt;/h3&gt;
+&lt;h3 id='id62'&gt;二：理解趋势：&lt;/h3&gt;
 
 &lt;p&gt;理解模式之前，首先谈论一下“趋势、倾向、大势”一系列概念，实际上，它们所代表的都是一个意思：趋势指的就是一个大概率事件，随着时间的推移表现出发生的频率：吸烟者更容易得肺癌、受教育程度越高越容易获得高工资。解释某个趋势：猜测、验证趋势的变量及其相互作用，解释谁对谁正在做什么、在哪里做、怎样做的，以及为什么会这样做，是获得“真正的模式”的第一个步骤。看到趋势和倾向，只是理解这些事情的第一步，一旦我们确认了这一趋势，我们就可开始尽可能地识洞察别出产生它的人类行动，如果我们意识不到这一趋势，我们可能也就意识不到，在它背后到底有有什么行动值得关注。&lt;/p&gt;
 
@@ -474,13 +518,13 @@ box.send(&amp;quot;open_#{num}&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;这个问题十本书也不见得写得完，何况是一篇小小的博文。这方面的方法论可以推荐时寒冰的 大道至简系列 和 查理芒格的 穷查理宝典 ，除此之外，统计学、逻辑学、心理学的等等一些基本功都必不可少。&lt;/p&gt;
 
-&lt;h3 id='id3'&gt;三：再说模式&lt;/h3&gt;
+&lt;h3 id='id63'&gt;三：再说模式&lt;/h3&gt;
 
 &lt;p&gt;模式究竟是什么？，就是存在于我们大脑中的那幅图像，当我们面临一个问题的时候，有经验的人常常有一个立刻的判断Malcolm Gladwell 《Blink》。这种直觉的判断基于经验，立体而真实，没有经验的人，大脑中反映的则常常是一些散乱的信号。经验产生的这幅图像，客观的看，未必是正确的，就算是正确，也未必是最优的。善于建立这种图像，不断的更新这种图像，不断的提升模式的应用能力，才能产生经验的快速积累效应。&lt;/p&gt;
 
 &lt;p&gt;模式的缺点是什么呢？右脑是很感性的，形象的说，这幅图像，本身是残缺的、模糊的、充满了谬论、错误和噪音，并随着时间的流逝，记忆不断的淡化。如果固守自己仅有的经验，固守心中那个未必正确的图像，最终，这幅图像，或者说你的经验，一定会过时，因此建立和更新比不可少&lt;/p&gt;
 
-&lt;h3 id='id4'&gt;四：更新模式&lt;/h3&gt;
+&lt;h3 id='id64'&gt;四：更新模式&lt;/h3&gt;
 
 &lt;p&gt;所以我们发现，我们实际上要学习的是建立模式和更新模式的能力，而实际上，模式并非creat出来的，而是update出来的。一开始，我们只能看到问题的一个角度：经济学者用经济学和数学模拟世界，哲学家用逻辑学和哲学猜想世界，计算机专家用硬件软件编译世界……然后慢慢的我们看世界的角度越来越多，也越来越看不懂，总觉得面前有层膜在阻挡着真理，实际上不只有一层膜，前面是无数的谬论、二阶不可知以及持续变化的事实。随着我们看问题的角度越来越多，也越来越深，我们不断update世界观。&lt;/p&gt;
 

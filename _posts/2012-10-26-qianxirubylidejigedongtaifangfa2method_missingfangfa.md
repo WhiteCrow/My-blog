@@ -74,3 +74,13 @@ method_missing方法一般用于missing同一类命名模式中的方法。
 		end
 	end
 
+这时候可以用到用define_method:
+
+	class Test;end
+	Test.class_eval do
+		[:profile, :email, :full_name].each do |method_name|
+			define_method method_name do
+				nil
+			end
+		end
+	end

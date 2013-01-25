@@ -40,3 +40,37 @@ method_missing方法是Kernel模块（也就是Ruby中最底层模块）的一�
 	end
 
 这里的super是调用祖先类的同名方法，因为只有Kernel 存在method_missing，它将最后调用Kernel#method_missing 如果说send方法是用于动态调用已经存在的方法，那么method_missing方法则是去动态生成并不存在的方法。那么我们能否动态地改变已存在的方法的内部信息呢？直接执行obj.method;puts "modified";end就行了。 :)
+
+##什么时候使用method_missing方法？
+
+method_missing方法一般用于missing同一类命名模式中的方法。
+例子：
+
+	TEMPLATE_CALL_METHODS = [:email_template, :header_menu_msg_template, :recent_activity_msg_template]
+
+	def method_missing(str, *args)
+		if TEMPLATE_CALL_METHODS.include? str
+	       @viewer = args.shift
+	       template = "#{str}_for_#{operation_name}"
+	       if respond_to? template
+	         send template
+	       else
+	         send email_template_name
+	       end
+	     else
+	       super
+	     end
+	end
+
+
+而不要这样单纯把method_missing方法用作一个防止抛异常方法。错误的用法：
+
+	CATCH_METHODS = [:profile, :email, :full_name]
+	def method_missing(str, *args)
+		if CATCH_METHODS.include? str
+			nil
+		else
+			super
+		end
+	end
+

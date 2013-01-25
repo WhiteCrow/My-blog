@@ -73,3 +73,10 @@ tags: ["Ruby"]
 	box.send("open_#{num}")
 
 这样，将num作为参数，用的open_num方法。 但这里需要注意的是，send方法太过强大，可以调用任何方法，包括私有方法，使用public_send方法将能够尊重方法接受者的隐私权，可以用它来代替send方法。
+
+###send方法的函数式用法  
+最近看了这篇[四个程序员的一天](http://justjavac.iteye.com/blog/170076)觉得很有意思，照着写了个ruby的函数式写法：
+
+	def foo(op, a, b)
+		a.send(op, b)
+	end

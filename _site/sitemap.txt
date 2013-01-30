@@ -8,6 +8,7 @@ http://username.github.com/tags.html
 http://username.github.com/pages.html
 http://username.github.com/atom.xml
 
+http://username.github.com/technology/2013/01/30/zairailszhongchuangjianqiantaobiaodannested_form
 http://username.github.com/technology/2013/01/25/rubyzhongclass_evalheinstance_evaldequbie
 http://username.github.com/2012/12/29/xianliaoshudedengji
 http://username.github.com/essay/2012/12/29/2012nianxuexijingyanzongjie
@@ -23,8 +24,9 @@ http://username.github.com/technology/2012/10/26/qianxirubylidejigedongtaifangfa
 http://username.github.com/essay/2012/10/26/moshishibie
 http://username.github.com/essay/2012/10/26/menglvren
 http://username.github.com/technology/2012/10/26/chengxuyuandeshicengliu-zhuanzai
-http://username.github.com/2012/10/26/change-postrubyliyeildheblockdeyongfa
 http://username.github.com/essay/2012/08/27/risiyexiang
 http://username.github.com/technology/2012/08/25/polymorphism-and-duck-type-in-ruby
 http://username.github.com/essay/2012/08/25/new-post
 http://username.github.com/technology/2012/08/25/jekyll-notes
+http://username.github.com/essay/2012/08/21/duixiaoshuodeyixiemisi2
+http://username.github.com/essay/2012/08/21/duixiaoshuodeyixiemisi1

@@ -159,82 +159,6 @@
 	}
 </style><a href='/archive.html'><img src='/assets/themes//dinky/images/index/index.png' width='940px' /></a><div id='cate'>
  
-  <h2 id='technology-ref'>technology</h2>
-  <ul>
-      
-    
-
-
-  
-    
-      
-      	
-      	<li><a href='/technology/2013/01/25/rubyzhongclass_evalheinstance_evaldequbie'>ruby中class_eval和instance_eval的区别</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href='/technology/2012/10/26/rubyzhongprochelambdedequbie'>Ruby中Proc和lambda的区别</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href='/technology/2012/10/26/rubyliyeildheblockdeyongfa'>Ruby里yeild和block的用法</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href='/technology/2012/10/26/qianxirubylidejigedongtaifangfa2method_missingfangfa'>浅析Ruby里的几个动态方法（二），method_missing方法</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href='/technology/2012/10/26/qianxirubylidejigedongtaifangfa1sendfangfa'>浅析Ruby里的几个动态方法（一），send方法</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href='/technology/2012/10/26/chengxuyuandeshicengliu-zhuanzai'>程序员的十层楼（转载）</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href='/technology/2012/08/25/polymorphism-and-duck-type-in-ruby'>Polymorphism and Duck Type in Ruby</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href='/technology/2012/08/25/jekyll-notes'>Jekyll notes</a></li>
-      	
-      
-    
-  
-
-
-
-  </ul>
- 
   <h2 id='essay-ref'>essay</h2>
   <ul>
       
@@ -322,6 +246,106 @@
       
     
   
+    
+      
+      	
+      	<li><a href='/essay/2012/08/21/duixiaoshuodeyixiemisi2'>对小说写作的一些迷思（二）,四步骤</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href='/essay/2012/08/21/duixiaoshuodeyixiemisi1'>对小说写作的一些迷思（一），微观与宏观</a></li>
+      	
+      
+    
+  
+
+
+
+  </ul>
+ 
+  <h2 id='technology-ref'>technology</h2>
+  <ul>
+      
+    
+
+
+  
+    
+      
+      	
+      	<li><a href='/technology/2013/01/30/zairailszhongchuangjianqiantaobiaodannested_form'>在rails中创建嵌套表单(nested form)</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href='/technology/2013/01/25/rubyzhongclass_evalheinstance_evaldequbie'>ruby中class_eval和instance_eval的区别</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href='/technology/2012/10/26/rubyzhongprochelambdedequbie'>Ruby中Proc和lambda的区别</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href='/technology/2012/10/26/rubyliyeildheblockdeyongfa'>Ruby里yeild和block的用法</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href='/technology/2012/10/26/qianxirubylidejigedongtaifangfa2method_missingfangfa'>浅析Ruby里的几个动态方法（二），method_missing方法</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href='/technology/2012/10/26/qianxirubylidejigedongtaifangfa1sendfangfa'>浅析Ruby里的几个动态方法（一），send方法</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href='/technology/2012/10/26/chengxuyuandeshicengliu-zhuanzai'>程序员的十层楼（转载）</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href='/technology/2012/08/25/polymorphism-and-duck-type-in-ruby'>Polymorphism and Duck Type in Ruby</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href='/technology/2012/08/25/jekyll-notes'>Jekyll notes</a></li>
+      	
+      
+    
+  
 
 
 
@@ -340,6 +364,48 @@ Hi, my name is LiuSihao. This is my personal blog that meant to share with you t
 </div><!-- 
 <div class="row-fluid">
 	
+	
+	 <div class="span5">
+			<div class="post" id="no" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
+				<a href="/technology/2013/01/30/zairailszhongchuangjianqiantaobiaodannested_form">
+			    	在rails中创建嵌套表单(nested form)
+			    	<li>30 Jan 2013</li>
+			    	<br>
+			    	<div class="post-content"><p>首先处理需要嵌套表单相关的model，在这里我们是用tile来嵌套attachment，所以model的代码分别是:</p>
+
+<pre><code>class Tile &lt; ActiveRecord::Base
+  has_many :attachments, :as =&gt; :attachable, :dependent =&gt; :destroy
+  accepts_nested_attributes_for :attachments, :allow_destroy =&gt; true
+  .....
+end
+
+class Attachment &lt; ActiveRecord::Base
+  belongs_to :attachable, :polymorphic =&gt; true
+  .....
+end</code></pre>
+
+<p>这里accepts_nested_attributes_for的作用是允许tile去嵌套attachment的属性，接下来我们看如何在view中代码：</p>
+
+<pre><code>&lt;%= form_for @tile do |f| %&gt;
+  ....
+  ##@tile本身的一些属性
+  f.fields_for :attachments do |builder|
+  	##这里注意，使用了fields创建了一个和attachment相关的fileds
+	&lt;% unless builder.object.new_record? %&gt;
+	  &lt;p id = &quot;&lt;%= builder.object.id %&gt;&quot;&gt;
+		&lt;%= image_tag file_type_icon_path(builder.object.file_type) %&gt;
+		&lt;%= builder.object.file_name %&gt;
+		&lt;%= check_box :_destroy, style: &#39;display:none&#39; %&gt;
+	  &lt;/p&gt;
+	&lt;% end %&gt;
+&lt;% end %&gt;</code></pre>
+
+<p>需要注意的是，在这段代码中，除了自己创建的一部分fields外，fields_for还会创建一个隐藏field用于处理每一个attachment，他的HTML代码类似这样：<input id='action_tile_attachments_attributes_0_id' name='action_tile[attachments_attributes][0][id]' type='hidden' value='53' /></p>
+
+<p>代码中的builder.check_box :_destroy 被勾选后会自动生成一些参数给params<span>:tile</span>去删除attachments参数类似a于&#8221;tile&#8221; =&gt; {&#8220;attachments_attributes&#8221;=&gt;{&#8221;0&#8221;=&gt;{&#8220;_destroy&#8221;=&gt;&#8221;1&#8221;, &#8220;id&#8221;=&gt;&#8221;54&#8221;}}。 当参数传递给tile.update_attributes后就会自动删除被勾选的attribute了。这就是在rails中构建嵌套表单的方式了。</p></div>
+			    </a>			    
+			</div>
+	</div>	
 	
 	 <div class="span5">
 			<div class="post" id="no" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
@@ -415,29 +481,29 @@ Test.instance_eval_test
 			    	2012年学习经验总结
 			    	<li>29 Dec 2012</li>
 			    	<br>
-			    	<div class="post-content"><h2 id='id68'>阅读与实践</h2>
+			    	<div class="post-content"><h2 id='id12'>阅读与实践</h2>
 
 <p>今年读得最好的一本书是《如何阅读一本书》。里面有一句话让我的印象非常深刻，大概的意思是“如果你读一本实用性的书而不能在实践中运用它，那么这本书相当于白读了。”我非常赞同，之前看茅于轼的博客中的一篇《习而时学之的工程学教育》也提到“用以致学”，我觉得就编程来说，更好的教育方式应该是从简单到难，一开始学HTML，CSS或一些简单的界面设计，然后是python或Ruby，再然后是SQL、开发框架，项目管理工具，版本管理工具地使用，接着学C，C++和JAVA及其开发工具，再接着是重构和设计模式，最后才是算法、数据结构、操作系统、编译原理这些东西，从易到难，用以致学；而当代IT教育的路数确是C语言——算法——数据库——编译原理——操作系统，中间加上网络、互联网、分布式、电信方面的基础理论，不得不感叹这种路数真是太特么坑爹了。</p>
 <hr />
-<h2 id='id69'>如何学习</h2>
+<h2 id='id13'>如何学习</h2>
 
-<h4 id='id70'>信源</h4>
+<h4 id='id14'>信源</h4>
 
 <p>信源的价值是学习要素中占得分量最大的那一块——甚至比意志力和专注更重要，寻找到高价值的适合自己的信源这一点再怎么强调也不为过。比如操作系统这种东西，最好就是照着Linux 1.1的源码自己写一个微型操作系统出来；编译原理也一样，自己照着书和编译器的源代码试着实现一个自己的编译器；算法与数据结构这种系统性不强的科目每天看一篇清晰易懂的博文并实践就很好了。</p>
 
-<h4 id='id71'>实践</h4>
+<h4 id='id15'>实践</h4>
 
 <p>最好的学习方式：是加入一个项目与圈子，在实践中成长。有团队就在团队中边做边学，没有团队就在Github上找个简单的开源项目去fork，研究，修改。以项目为中心，书、论文、google都是只是参考。少看多做非常非常重要！！（这也是跟我自己说的），玩机器学习？看了书理解基本后直接fork github一个项目开始看源代码，自己修改代码，pull request。操作系统？编译器？都是这样。</p>
 
-<h4 id='id72'>生态环境</h4>
+<h4 id='id16'>生态环境</h4>
 
 <p>该分支的生态环境——开源社区的贡献、巨头公司和大学在上下游的支持、这个领域的大牛、著名论文有哪些？熟悉生态环境是在你实践一个项目的过程中会自然而然接触到的，也是在实践之后要重点熟悉的。</p>
 
-<h4 id='id73'>选书？</h4>
+<h4 id='id17'>选书？</h4>
 
 <p>书只是众多信源中的一种，我现在感觉书的重要性远远没有人们想象的那么高，如果不是一个人的主业，对每个细分领域中，反复阅读的经典书籍也就两三本，一本经典入门，一本当手册参考，一本讲思想本质，多余的书是不值得读全本的。我现在反复阅读的书中只有Ruby on Rails这一块中有超过3本，远离读书的诱惑，非常有必要。</p>
 <hr />
-<h2 id='id74'>我的学习管理</h2>
+<h2 id='id18'>我的学习管理</h2>
 
 <p>因为是做IT的缘故，我的学习管理链全都是软件工具所构建的，分为下面这些软件：</p>
 
@@ -445,13 +511,13 @@ Test.instance_eval_test
 
 <p>这些软件又分为三大类：输入，整理和输出</p>
 
-<h3 id='id75'>输入</h3>
+<h3 id='id19'>输入</h3>
 
-<h4 id='id76'>第一手知识来源：</h4>
+<h4 id='id20'>第一手知识来源：</h4>
 
 <p>博客、书籍、遇到疑难问题后google的答案、SNS碎片知识</p>
 
-<h4 id='id77'>处理方式：</h4>
+<h4 id='id21'>处理方式：</h4>
 
 <p>google的答案、SNS碎片、博客中确实有效用的都用chrome的插件“悦读”（也叫evernote clipe）</p>
 
@@ -461,15 +527,15 @@ Test.instance_eval_test
 
 <p><img alt='mind map' src='http://farm9.staticflickr.com/8491/8320620890_daaa2ee968_b.jpg' /></p>
 
-<h3 id='id78'>整理</h3>
+<h3 id='id22'>整理</h3>
 
 <p>能形成思维导图的笔记都会通过email发送到我的电脑上。 而不能形成导图的笔记事先会在evernote或豆瓣笔记里加上标签和分类，多了之后的则会整理成<a href='http://zh.wikipedia.org/zh-hans/Markdown'>markdown</a>形式的知识树，最后思维导图、markdown文件、一些可重用的代码都会整合到我用github做的<a href='https://github.com/WhiteCrow/km'>知识管理工具</a>中。</p>
 
-<h3 id='id79'>输出</h3>
+<h3 id='id23'>输出</h3>
 
 <p>最后输出分为两份： 豆瓣日记则是随笔，想到什么写什么，大多写的短文； 博客，写可以分享的，稍微有价值一些的东西；</p>
 
-<h3 id='id80'>欠缺的东西</h3>
+<h3 id='id24'>欠缺的东西</h3>
 
 <p>这个学习管理链条中还欠缺一些东西<br />1. 高端知识的输入——知名博客、论文数据库。<br />2. 自动化的整理方式，可参考阳志平的<a href='http://www.douban.com/note/254981732/'>科学的科学：科学计量学入门浅谈所用到的方法</a>。<br />3. 知识管理系统查阅缓慢，需要做成一个web app，并将它和我的博客合并起来。<br />4. 工具太分散了，特别是笔记工具，需要调整。<br />5. 请大家批评。</p>
 
@@ -624,7 +690,7 @@ bar
 # 2
 #=&gt; &quot;I will display&quot; </code></pre>
 
-<h2 id='id67'>参数处理</h2>
+<h2 id='id11'>参数处理</h2>
 
 <p>我们可以看到，假设Proc和lambda两者都定义了2个参数，但在实际调用时，只传一个的话，lambda 会报错，Proc 将缺失的参数设为 nil，然后正常调用。 f.call(1)时，得到的是<span>1,nil</span> 而b.call(1)时，则会报错：ArgumentError: wrong number of arguments (1 for 2)</p>
 
@@ -644,7 +710,7 @@ bar
 			    	<div class="post-content"><hr />
 <h2 id='rubyyeildblock'>Ruby里yeild和&amp;block的用法</h2>
 <br />
-<h3 id='id65'>例子：</h3>
+<h3 id='id9'>例子：</h3>
 
 <pre><code>class Box
    def do(who,kind,&amp;block)
@@ -662,7 +728,7 @@ box.do(&quot;I&quot;,&quot;iron&quot;){ return &quot;open&quot; }
 box.do(&quot;She&quot;,&quot;wooden&quot;){ &quot;kick&quot; }
 #=&gt; &quot;She kick wooden Box&quot;</code></pre>
 
-<h3 id='id66'>让我们来做一个改进版：</h3>
+<h3 id='id10'>让我们来做一个改进版：</h3>
 
 <pre><code>class People
   def initialize(name)
@@ -767,6 +833,17 @@ def method_missing(str, *args)
 	else
 		super
 	end
+end</code></pre>
+
+<p>这时候可以用到用define_method:</p>
+
+<pre><code>class Test;end
+Test.class_eval do
+	[:profile, :email, :full_name].each do |method_name|
+		define_method method_name do
+			nil
+		end
+	end
 end</code></pre></div>
 			    </a>			    
 			</div>
@@ -843,7 +920,15 @@ box = Box.new
 
 box.send(&quot;open_#{num}&quot;)</code></pre>
 
-<p>这样，将num作为参数，用的open_num方法。 但这里需要注意的是，send方法太过强大，可以调用任何方法，包括私有方法，使用public_send方法将能够尊重方法接受者的隐私权，可以用它来代替send方法。</p></div>
+<p>这样，将num作为参数，用的open_num方法。 但这里需要注意的是，send方法太过强大，可以调用任何方法，包括私有方法，使用public_send方法将能够尊重方法接受者的隐私权，可以用它来代替send方法。</p>
+
+<h3 id='send'>send方法的函数式用法</h3>
+
+<p>最近看了这篇<a href='http://justjavac.iteye.com/blog/170076'>四个程序员的一天</a>觉得很有意思，照着写了个ruby的函数式写法：</p>
+
+<pre><code>def foo(op, a, b)
+	a.send(op, b)
+end</code></pre></div>
 			    </a>			    
 			</div>
 	</div>	
@@ -854,7 +939,7 @@ box.send(&quot;open_#{num}&quot;)</code></pre>
 			    	模式识别
 			    	<li>26 Oct 2012</li>
 			    	<br>
-			    	<div class="post-content"><h3 id='id61'>一：什么是模式</h3>
+			    	<div class="post-content"><h3 id='id5'>一：什么是模式</h3>
 
 <p>人类有许多智慧是存在于右脑的，右脑有一个非常重要的功能就是模式的判断和识别（参考《非理性市场与蜥蜴式大脑思维》和《程序员的思维修炼》），善用这一点，常常能极大的提高自己的能力。为了说明模式的威力，举几个例子：</p>
 
@@ -870,7 +955,7 @@ box.send(&quot;open_#{num}&quot;)</code></pre>
 
 <p>理解模式，即是理解什么样的事物倾向于联系到一起或一起发生。如果我们知道世界运作的模式，这个世界就会成为一个可以预测和控制的地方。</p>
 
-<h3 id='id62'>二：理解趋势：</h3>
+<h3 id='id6'>二：理解趋势：</h3>
 
 <p>理解模式之前，首先谈论一下“趋势、倾向、大势”一系列概念，实际上，它们所代表的都是一个意思：趋势指的就是一个大概率事件，随着时间的推移表现出发生的频率：吸烟者更容易得肺癌、受教育程度越高越容易获得高工资。解释某个趋势：猜测、验证趋势的变量及其相互作用，解释谁对谁正在做什么、在哪里做、怎样做的，以及为什么会这样做，是获得“真正的模式”的第一个步骤。看到趋势和倾向，只是理解这些事情的第一步，一旦我们确认了这一趋势，我们就可开始尽可能地识洞察别出产生它的人类行动，如果我们意识不到这一趋势，我们可能也就意识不到，在它背后到底有有什么行动值得关注。</p>
 
@@ -884,13 +969,13 @@ box.send(&quot;open_#{num}&quot;)</code></pre>
 
 <p>这个问题十本书也不见得写得完，何况是一篇小小的博文。这方面的方法论可以推荐时寒冰的 大道至简系列 和 查理芒格的 穷查理宝典 ，除此之外，统计学、逻辑学、心理学的等等一些基本功都必不可少。</p>
 
-<h3 id='id63'>三：再说模式</h3>
+<h3 id='id7'>三：再说模式</h3>
 
 <p>模式究竟是什么？，就是存在于我们大脑中的那幅图像，当我们面临一个问题的时候，有经验的人常常有一个立刻的判断Malcolm Gladwell 《Blink》。这种直觉的判断基于经验，立体而真实，没有经验的人，大脑中反映的则常常是一些散乱的信号。经验产生的这幅图像，客观的看，未必是正确的，就算是正确，也未必是最优的。善于建立这种图像，不断的更新这种图像，不断的提升模式的应用能力，才能产生经验的快速积累效应。</p>
 
 <p>模式的缺点是什么呢？右脑是很感性的，形象的说，这幅图像，本身是残缺的、模糊的、充满了谬论、错误和噪音，并随着时间的流逝，记忆不断的淡化。如果固守自己仅有的经验，固守心中那个未必正确的图像，最终，这幅图像，或者说你的经验，一定会过时，因此建立和更新比不可少</p>
 
-<h3 id='id64'>四：更新模式</h3>
+<h3 id='id8'>四：更新模式</h3>
 
 <p>所以我们发现，我们实际上要学习的是建立模式和更新模式的能力，而实际上，模式并非creat出来的，而是update出来的。一开始，我们只能看到问题的一个角度：经济学者用经济学和数学模拟世界，哲学家用逻辑学和哲学猜想世界，计算机专家用硬件软件编译世界……然后慢慢的我们看世界的角度越来越多，也越来越看不懂，总觉得面前有层膜在阻挡着真理，实际上不只有一层膜，前面是无数的谬论、二阶不可知以及持续变化的事实。随着我们看问题的角度越来越多，也越来越深，我们不断update世界观。</p>
 
@@ -1229,17 +1314,6 @@ box.send(&quot;open_#{num}&quot;)</code></pre>
 	
 	 <div class="span5">
 			<div class="post" id="no" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
-				<a href="/2012/10/26/change-postrubyliyeildheblockdeyongfa">
-			    	change post:rubyliyeildheblockdeyongfa
-			    	<li>26 Oct 2012</li>
-			    	<br>
-			    	<div class="post-content"></div>
-			    </a>			    
-			</div>
-	</div>	
-	
-	 <div class="span5">
-			<div class="post" id="no" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
 				<a href="/essay/2012/08/27/risiyexiang">
 			    	日思夜想
 			    	<li>27 Aug 2012</li>
@@ -1371,6 +1445,76 @@ end</code></pre></div>
 </blockquote>
 </li>
 </ol></div>
+			    </a>			    
+			</div>
+	</div>	
+	
+	 <div class="span5">
+			<div class="post" id="no" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
+				<a href="/essay/2012/08/21/duixiaoshuodeyixiemisi2">
+			    	对小说写作的一些迷思（二）,四步骤
+			    	<li>21 Aug 2012</li>
+			    	<br>
+			    	<div class="post-content"><p>小说写作的过程中，一般分为四步：设计、执行、重构、优化。</p>
+
+<h3 id='id1'>设计</h3>
+
+<p>也就是列大纲，在这个阶段不用考虑真实性、合理性、是否俗套、是否有难度，甚至不用考虑如何结尾。你需要设计的只有人物、背景和情节，越多越好，让人物的命运相互碰撞，登上你的舞台。这里没有不切实际的剧情美学、黄金结构。这里并不是该卡尔维诺或者昆德拉说教的时候，创意乃设计之王，天马行空，无所顾及。</p>
+
+<h3 id='id2'>执行</h3>
+
+<p>开始写吧，哪怕最庸俗的开头，最无生气的人物，先让那些作家的敦敦教诲站到一边，写就够了，执行你的创意。哪怕完全说不通的创意，让那些闪电般的东西注入你的文字，不管它是否将美感和结构劈得一塌糊涂。你是创作命运之人，你是作品的王，它们是你的奴隶，想怎样摆弄它们就怎么样摆弄它们。文字粗糙？剧情烂俗？先让评价退位，你需要保持写作的热情，不应该让它们来打搅你。这一阶段，耐性和热情才是你最应该看重的。</p>
+
+<h3 id='id3'>重构</h3>
+
+<p>现在你写得有点累了，是时候回过头来修缮一下。不过等待，这里并不是要你去增加美感、表现力和感染力，保持通顺就好，笑料？泪点？疑点？这些锦上添花之物，暂且放在一旁，保持通顺就好。重点在于：该是做铺垫的时候了。有什么伏笔、包袱，让它们深深嵌入你的作品。清理一些障碍，剔除部必要的桥段，然后添加些铺垫性的桥段，不要让作品难以继续写作，给出一段大路，让你的文字在以后的道路上继续高速飞驰。耐心在这个阶段是你最应当看重。暂时的重构，是为了以后的写作更加顺畅。你会感到像是在修缮毫无意义的杂草，你的工作会暂时地显得没有价值。但请坚持下去，保持下去，安静地习惯下去。</p>
+
+<h3 id='id4'>优化</h3>
+
+<p>写完了吗？还没有，写道某个阶段即可，或许在整本书的转折点，整个三幕中的某一幕。来优化吧，先不慌，美感依然不是最重要的。你首先需要下意识地注意叙述结构、角度和重心。清扫一下，渐渐将小说的主线露出来，将那些不合理的情节修改一下，或者添加、删除一些情节将它变得合理。优雅的小说架构并非一开是就被设计出来的，它是被不断优化的渐渐显露。</p>
+
+<p>泪点、疑点、笑点，在每一章都添加几个吧，该是让你的作品焕发出张力的时候了。</p>
+
+<p>唔，现在有了结构和张力，不错，但从微观的角度，文字的角度读起来依旧索然无味。这是该美感发力的时候了，请用写散文或者写诗的方式来对待这部小说，着重于表现力和感染力，越是高潮前后，越是开头结尾，着默就越重。</p>
+
+<p>迭代和收尾</p>
+
+<p>经过这四步骤，你会发现一部小说该有东西你都有了，而且看起来还很优秀。那么不断迭代这四步吧，直到小说的完成。在最后收尾时，稍加修饰即可，某个错别字，某个不和谐的用词等待。</p></div>
+			    </a>			    
+			</div>
+	</div>	
+	
+	 <div class="span5">
+			<div class="post" id="no" onmouseover = "$(this).attr('id','cover')" onmouseout ="$(this).attr('id','no')">
+				<a href="/essay/2012/08/21/duixiaoshuodeyixiemisi1">
+			    	对小说写作的一些迷思（一），微观与宏观
+			    	<li>21 Aug 2012</li>
+			    	<br>
+			    	<div class="post-content"><h3 id='1'>1.微观部分：</h3>
+
+<p>微观部分就是写片段。在片段上，我的写作角度一切以表现和感染为中心。如果写作者想在小片段上体现出什么人生哲理，文以载道之类，几乎不可能。就算周作人和村上春树这个档次的作家，也是写感染，然后用感染去让人明白一些称之为“意义”的东西，事实上，读者对于这些“意义”也大多似懂非懂，其实是受到了感染。而所谓“文以载道”是一个文化现象，无数读者和考据者添加到原作中，拓展描述原作，以至于成为文史的一部分。如同金融游戏，某个蓝筹股固然让人看好，但你炒我也炒，炒到后来便成了天价。</p>
+
+<p>所以微观描写，要砸碎概括，点细的写。要表现力，要感染。</p>
+
+<p>表现力：或约传神，或约生动。靠比喻、拟人、写细，写精，一目了然，如同拨开云雾见青天，令人拍手叫绝。</p>
+
+<p>感染力：比表现力更高一层，表现好了事物，再混入人物情绪，自然而然能感染到读者。另外可加排比、对偶中表现气势，或层层递进，增进程度。</p>
+
+<p>写片段要像照着真实的景物画素描，要掌握一套模式，什么都能画，什么都能画得像，不要像临摹画稿似的，你临摹过猫狗就只会画猫狗，给个老鹰就傻眼了。</p>
+
+<p>写好片段很容易，多读多看那些牛人的，抄十几万字他们的优秀的描写绝逼可靠：我比较喜欢村上春树和周作人、另外刘小枫、康 巴斯乌托夫斯基、里尔克的小说和散文、北岛的、冯至的，还有其它著名诗人写的或翻译的小说散文。这个方面要学习文学的“刀尖”——诗人写的东西。虽说看不懂诗，但看他们写的文，是那种把心力铺在一个个字词上的。很容易就让自己的文字水平上几个台阶。</p>
+
+<h3 id='2'>2.宏观部分：</h3>
+
+<p>宏观就是指整个小说的结构：场景安排、人物命运、文化氛围、矛盾冲突等。在宏观部分，写得很少。列的小说大纲大多都没有完成。一来自己没有坚持下去，越写感觉越不对，仿佛心里堵了车；二来大纲写得太粗糙，一个百万字的小说起码要十万到三十万字的大纲，一个十万字的小说起码要一到三万字的大纲。</p>
+
+<p>很多人写散文，写短篇、中篇写得很传神，很牛逼，就是不懂怎么写长篇？什么原因，不会呗。</p>
+
+<p>我也不会，恰好很少看到教写长篇的好书，如果哪个有著名长篇小说家或剧作家写过这方面的书，望推荐。我现在能拿着编剧书依样画葫芦。 《你的剧本逊毙了》这本书比较简单，如果实在不知道怎么写长篇，它直接给你上一个小说框架——从矛盾冲突到人物出场的整个大结构，往里面填填人物、情节、场景，再加点噱头创意，一个还不错的小说/剧本大纲就出来了。</p>
+
+<p>缺点是：只适合写比较商业性的小说，比如美剧、好莱坞电影，既好看又快餐，读者又买账。但是要写《情人》、《挪威的森林》这类比较“另类的”，或是《三体》这种超复杂的，帮不上多大忙。</p>
+
+<p>宏观方面是我的弱项，但却是长篇小说的精髓。现阶段改进：（1）好好写大纲，争取写个几万字的大纲出来。五脏俱全的那种。然后照着大纲在写好小说。否则这个瓶颈跨不过去。（2）试图将软件设计中的设计模式引人小说写作，暂时有些技术上的问题，如何埋伏笔、抖包袱，控制缓急节奏。</p></div>
 			    </a>			    
 			</div>
 	</div>	

@@ -2,8 +2,8 @@
 layout: post
 title: "对小说写作的一些迷思（二）,四步骤"
 description: ""
-category: [essay]
-tags: [novel]
+category: ["essay"]
+tags: ["novel"]
 ---
 {% include JB/setup %}
 小说写作的过程中，一般分为四步：设计、执行、重构、优化。

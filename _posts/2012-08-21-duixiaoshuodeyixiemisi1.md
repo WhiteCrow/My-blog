@@ -2,8 +2,8 @@
 layout: post
 title: "对小说写作的一些迷思（一），微观与宏观"
 description: ""
-category: [essay]
-tags: [novel]
+category: ["essay"]
+tags: ["novel"]
 ---
 {% include JB/setup %}
 ###1.微观部分：
